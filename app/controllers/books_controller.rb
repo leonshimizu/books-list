@@ -13,4 +13,10 @@ class BooksController < ApplicationController
     book.save
     render json: book.as_json
   end
+
+  def show
+    the_id = params[:id]
+    book = Book.find_by(id: the_id)
+    render json: book.as_json
+  end
 end

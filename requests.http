@@ -9,3 +9,6 @@ content-type: application/json
   "author": "Jordan Peterson",
   "year": 2018
 }
+
+###
+GET http://localhost:3000/books/101.json
