@@ -12,3 +12,13 @@ content-type: application/json
 
 ###
 GET http://localhost:3000/books/101.json
+
+###
+PATCH http://localhost:3000/books/102.json
+content-type: application/json
+
+{
+  "title": "Beyond Order",
+  "author": "Jordan Peterson",
+  "year": 2021
+}
