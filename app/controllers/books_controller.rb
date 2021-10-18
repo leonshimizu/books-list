@@ -26,7 +26,15 @@ class BooksController < ApplicationController
     book.title = params[:title] || book.title 
     book.author = params[:author] || book.author
     book.year = params[:year] || book.year
-
+    book.save
     render json: book.as_json
+  end
+
+  def destroy
+    the_id = params[:id]
+    book = Book.find_by(id: the_id)
+    book.destroy
+    message = "Successfully deleted the book."
+    render json: message.as_json
   end
 end
